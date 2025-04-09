@@ -2,15 +2,16 @@ import os
 from dotenv import load_dotenv
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ConversationHandler, MessageHandler, filters, ContextTypes
+
 load_dotenv()
 
 API_KEY = os.getenv("TELEGRAM_API_KEY")
 
 # creating app
 
+
 def main() -> None:
 
-    application = Application.builder().token(API_KEY).build()
     application = Application.builder().token(API_KEY).build()
 
     # commands
